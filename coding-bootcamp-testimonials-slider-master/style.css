@@ -71,11 +71,27 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   border: none;
+  cursor: pointer;
 }
 .nav_buttons .next_btn {
   flex: 1;
   background: url(./images/icon-next.svg);
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50%;
   border: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background: url(./images/pattern-bg.svg), url(./images/pattern-quotes.svg),
+      url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-size: 80%, 20%, 80%;
+    background-position: 62% 18%, 45% 58%, bottom left;
+  }
+  .tanya,
+  .john {
+    display: flex;
+    flex-direction: column;
+  }
 }
