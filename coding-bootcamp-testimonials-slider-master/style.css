@@ -92,6 +92,42 @@ body {
   .tanya,
   .john {
     display: flex;
+    flex-direction: column-reverse;
+  }
+  .image__container img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+  }
+  .container p {
+    font-size: 1.2rem;
+    margin-top: 4.5rem;
+  }
+  .container .name {
+    font-size: 1rem;
+  }
+  .container .title {
+    font-size: 1.1rem;
+  }
+  .name-title {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .image__container .nav_buttons {
+    position: absolute;
+    height: 40px;
+    width: 70px;
+    top: 230px;
+    right: 90px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: 1px 8px 10px 0.4px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hide {
+    display: none;
   }
 }

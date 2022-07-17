@@ -49,7 +49,7 @@
             <span class="profession"> Junior Front-end Developer </span>
           </div>
         </div>
-        <div class="image__Container">
+        <div class="image__container">
           <img src="./images/image-john.jpg" alt="john's image" />
           <div class="nav_buttons">
             <button class="prev_btn"></button>
@@ -58,5 +58,25 @@
         </div>
       </div>
     </div>
+    <script>
+      const john = document.querySelector(".john");
+      const tanya = document.querySelector(".tanya");
+      const prev = document.querySelectorAll(".prev_btn");
+      const next = document.querySelectorAll(".next_btn");
+      john.classList.add("hide");
+      const changeSlide = () => {
+        if (john.classList.contains("hide")) {
+          john.classList.remove("hide");
+          tanya.classList.add("hide");
+        } else if (tanya.classList.contains("hide")) {
+          tanya.classList.remove("hide");
+          john.classList.add("hide");
+        } else {
+          john.classList.add("hide");
+        }
+      };
+      prev.forEach((item) => item.addEventListener("click", changeSlide));
+      next.forEach((item) => item.addEventListener("click", changeSlide));
+    </script>
   </body>
 </html>
