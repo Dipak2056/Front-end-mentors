@@ -5,7 +5,7 @@
   font-size: 18px;
 }
 body {
-  padding: 5%;
+  padding: 2.5%;
 }
 button {
   background-color: hsl(322, 100%, 66%);
@@ -19,11 +19,13 @@ button {
 .main {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
 }
+/* card-design */
 .card {
   display: flex;
   border: 2px solid hsl(208, 11%, 55%);
+
   border-radius: 5px;
   margin: 5px;
 }
@@ -42,6 +44,7 @@ button {
 .card_image > img {
   width: 100%;
 }
+/* tab design */
 
 .tablet {
   display: flex;
@@ -55,12 +58,66 @@ button {
   border: 2px solid hsl(208, 11%, 55%);
   border-radius: 5px;
   margin-left: 25%;
-  margin-top: -2em;
+  margin-top: -3em;
   position: absolute;
   z-index: 4;
 }
+/* footer-design */
 .footer {
   background-color: hsl(192, 100%, 9%);
   color: white;
+  padding: 1em;
   padding-top: 3em;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "l . . . . . . . . . . ."
+    "m m m m m m m m m m m m"
+    ". . . . . . . . . f f f";
+}
+
+.footer_logo > img {
+  padding: 10px;
+}
+.footer_main {
+  grid-area: m;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 2%;
+}
+.detail {
+  margin-left: 0.5em;
+}
+.footer_copyright {
+  grid-area: f;
+  font-size: 0.8em;
+}
+.footer_first_phone,
+.footer_first_location,
+.footer_first_email {
+  display: flex;
+  margin: 0.5em;
+}
+.footer_second > ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1em;
+  width: 100%;
+}
+.footer_second > ul > li {
+  list-style: none;
+}
+.footer_third {
+  display: flex;
+}
+.footer_icons {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  margin: 5px;
 }
